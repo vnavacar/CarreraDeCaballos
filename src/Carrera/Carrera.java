@@ -23,13 +23,14 @@ public class Carrera {
             hilos[i].correr();
         }
         for(int i = 0; i < numeroCaballos; i++) {
+            
             try {
                 hilos[i].join();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        
+
 
     }
 

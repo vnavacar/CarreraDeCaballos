@@ -4,16 +4,17 @@ import java.util.Random;
 public class manejadorHilo extends Thread{
     private int numeroHilo;
     private final int meta = 100;
+    private int tiempo = 0;
 
 
     public manejadorHilo(int numeroHilo) {
         this.numeroHilo = numeroHilo;
     }
 
-    public int correr() {
+    public void correr() {
         Random r = new Random();
         int distancia = 0;
-        int tiempo = 0;
+        tiempo = 0;
         int temp = 0;
         while (distancia < meta) {
             distancia += 1;
@@ -28,6 +29,5 @@ public class manejadorHilo extends Thread{
             }
         }
         System.out.println("El caballo " + numeroHilo + " ha llegado a la meta en " + tiempo + " milisegundos");
-        return tiempo;
     }
 }
