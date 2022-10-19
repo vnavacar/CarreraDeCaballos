@@ -10,10 +10,10 @@ public class manejadorHilo extends Thread{
         this.numeroHilo = numeroHilo;
     }
 
-    public void correr() {
+    public int correr() {
         Random r = new Random();
         int distancia = 0;
-        float tiempo = 0;
+        int tiempo = 0;
         int temp = 0;
         while (distancia < meta) {
             distancia += 1;
@@ -28,5 +28,6 @@ public class manejadorHilo extends Thread{
             }
         }
         System.out.println("El caballo " + numeroHilo + " ha llegado a la meta en " + tiempo + " milisegundos");
+        return tiempo;
     }
 }
