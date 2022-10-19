@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Carrera {
     private static int numeroCaballos;
     private static manejadorHilo hilos[];
+    private static int tiempos[];
 
     public static void lanzador() {
         Scanner sc = new Scanner(System.in);
@@ -26,10 +27,12 @@ public class Carrera {
             
             try {
                 hilos[i].join();
+                tiempos[i]=hilos[i].getTiempo();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
+        
 
 
     }
