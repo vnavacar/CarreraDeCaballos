@@ -9,7 +9,7 @@ public class resultado {
     }
     void resultadoCarrera() {
         for (int i = 0; i < tiempos.length; i++) {
-            System.out.println("El caballo " + i + " ha tardado " + tiempos[i] + " segundos");
+            System.out.println("El caballo " + i + " ha tardado " + tiempos[i] + " segundos\n");
         }
     }
     
